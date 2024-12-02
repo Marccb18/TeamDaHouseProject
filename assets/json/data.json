@@ -1,0 +1,79 @@
+[
+  {
+    "nombre": "Laura Sánchez",
+    "profesion": "Instructora de CrossFit",
+    "area": "GYM",
+    "descripcion": "Certificada en CrossFit Level 2, especializada en entrenamiento funcional y fuerza.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Diego Martínez",
+    "profesion": "Entrenador de CrossFit",
+    "area": "GYM",
+    "descripcion": "Coach con 5 años de experiencia en entrenamientos de alta intensidad y levantamiento olímpico.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Ana Gómez",
+    "profesion": "Instructora de Danza",
+    "area": "DANCE",
+    "descripcion": "Bailarina profesional con especialización en danza contemporánea y zumba.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Carlos Ramírez",
+    "profesion": "Profesor de Danza",
+    "area": "DANCE",
+    "descripcion": "Coreógrafo experto en salsa, bachata y ritmos latinos.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Lucía Pérez",
+    "profesion": "Instructora de CrossFit",
+    "area": "GYM",
+    "descripcion": "Especializada en entrenamiento metabólico y acondicionamiento físico.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Pedro Fernández",
+    "profesion": "Profesor de Danza",
+    "area": "DANCE",
+    "descripcion": "Instructor de hip-hop y street dance con más de 7 años de experiencia.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  },
+  {
+    "nombre": "Pedro Fernández",
+    "profesion": "Profesor de Danza",
+    "area": "GYMDANCE",
+    "descripcion": "Instructor de hip-hop y street dance con más de 7 años de experiencia.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/6833/6833573.png",
+    "facebook": "#",
+    "instagram": "#",
+    "pinterest": "#",
+    "twitter": "#"
+  }
+]
