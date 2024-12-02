@@ -3394,6 +3394,11 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.slider-area2.dance {
+  background-image: url(../img/hero/hero_dance.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* line 37, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area {
@@ -3409,6 +3414,7 @@ hr {
 .slider-area .hero__caption {
   overflow: hidden;
 }
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
@@ -6624,6 +6630,19 @@ hr {
   background: linear-gradient(to bottom, #950101 0%, #630102 100%, #3d030200 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#950101', endColorstr='#3d0302',GradientType=0 );
+  /* IE6-9 */
+}
+.header-area.dance .menu-wrapper .main-menu ul ul.submenu,
+.header-area.dance .header-sticky.sticky-bar {
+  background: #9b0084;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9b0084 0%, #640055 100%, #33022b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9b0084 0%, #640055 100%, #33022b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9b0084 0%, #640055 100%, #33022b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#00cccc', GradientType=0 );
   /* IE6-9 */
 }
 

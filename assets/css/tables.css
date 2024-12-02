@@ -1,0 +1,75 @@
+/* Contenedor general */
+.container {
+    margin: 40px auto;
+    padding: 40px;
+    width: 60%;
+    font-size: 18px;
+    color: white;
+}
+
+/* Estilo de las tablas */
+.table-container {
+    margin-bottom: 30px;
+    text-align: left; /* Alineación a la izquierda para los títulos */
+}
+
+.tarifa-table {
+    width: 100%; /* Aumentar al 100% del contenedor */
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.tarifa-table th, .tarifa-table td {
+    padding: 12px;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.tarifa-table th {
+    background-color: #444;
+}
+
+.tarifa-table tr:nth-child(even) {
+    background-color: #555;
+}
+
+.tarifa-table tr:nth-child(odd) {
+    background-color: #333;
+}
+
+.tarifa-table td {
+    border-bottom: 1px solid #666;
+}
+
+h3 {
+    font-size: 28px; 
+    margin-bottom: 15px;
+}
+
+
+.info-box {
+    background-color: cyan;
+    color: white;
+    padding: 12px 20px; 
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px; 
+    width: 60%; 
+    margin: 0 auto; 
+}
+
+.info-box h4 {
+    margin-bottom: 10px;
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+.info-box p {
+    font-size: 16px; 
+    line-height: 0.7;
+    font-weight: bold; 
+}
