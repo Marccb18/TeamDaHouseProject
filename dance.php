@@ -119,15 +119,15 @@ $horarios = json_decode($jsonDataHorarios, true);
                 <!-- section tittle -->
                 <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="front-text">
-                        <h2 class="">About Our Dance Program</h2>
+                        <h2 class="">
+                        Sobre Nuestro Programa de Danza</h2>
                         <p>
-                            Our Dance program is designed to help you achieve peak fitness through high-intensity, 
-                            functional movements. Led by certified coaches, our classes combine strength training, 
-                            cardio, and skill work to improve your overall fitness, strength, and endurance. 
-                            Suitable for all fitness levels, our program focuses on personalized coaching 
-                            and a supportive community environment.
+                            Nuestro programa de danza está diseñado para ayudarte a desarrollar tu expresión artística 
+                            y bienestar físico a través de movimientos dinámicos y rítmicos. Guiadas por instructores 
+                            certificados, nuestras clases combinan técnica, ritmo y fluidez para mejorar tu coordinación, 
+                            flexibilidad y resistencia. Adaptado a todos los niveles, el programa se enfoca en una enseñanza 
+                            personalizada y en crear un ambiente inclusivo y motivador donde puedas disfrutar del arte de la danza.
                         </p>
-                        <a href="courses.html" class="border-btn">My Courses</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@ $horarios = json_decode($jsonDataHorarios, true);
     <!-- Services End -->
     
     <!-- Horario -->
-    <section class="traning-categories black-bg" id="Horario">
+    <section class="schedules custom-container">
     <div class="container-fluid">
         <div class="row">
         <div class="col-xl-12">
