@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.cards-container {
+.cards-container-1 {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -12,62 +12,36 @@
     justify-content: center;
     align-items: center;
     margin: 15px;
-    
 }
 
-.card {
-    height: 250px;
+.card-1 {
+    height: 170px;
     width: 300px;
-    box-shadow: 0 10px 20px rgba(246, 92, 92, 0.341);
     padding-bottom: 10px;
+    padding-top: 10px;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
-    font-family: 'Abel', sans-serif;
-    background-color: black;
-    
+    box-shadow: 5px 4px 15px 5px rgba(252, 91, 91, 0.758);
+    background-color: #000000;
+    border-radius: 10px;
+    border-color: white;
 }
 
-/* .imagen {
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    border-radius: 50%;
-    position: relative;
-    border: 8px solid white;
-    top: 180px;
-    left: 220px;
-    box-shadow: 0 2px 15px rgb(58, 54, 54);
-    transform: rotate(-20deg);
-} */
-
-.fondo-partido {
-    height: 250px;
-    width: 400px;
-    background-color: rgb(255, 255, 255);
-    margin-left: -20px;
-    position: relative;
-    top: -80px;
-    box-shadow: 0 2px 15px rgb(158, 158, 158);
-    transform: rotate(25deg);
-}
-
-h3 {
+h3.card-title-1 {
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-size: 14px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
 }
 
-.titulo {
-    color: rgb(105, 100, 109);
-}
-
-p {
+p.card-text-1 {
     padding-left: 30px;
     padding-right: 30px;
-    color: rgb(105, 100, 109);
+    color: rgb(255, 255, 255);
 }

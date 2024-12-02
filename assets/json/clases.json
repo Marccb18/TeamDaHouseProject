@@ -1,117 +1,121 @@
 [
     {
-        "nombre": "Danza Africana",
-        "descripcion": "Descripcion",
+        "nombre": "Danza Africana 🥶​",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza Urbana Baby",
-        "descripcion": "Descripcion",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza Urbana Kids",
-        "descripcion": "Descripcion",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza Urbana Infantil",
-        "descripcion": "Descripcion",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza Urbana Adultos",
-        "descripcion": "Descripcion",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
-        "nombre": "Flamenco Puro",
-        "descripcion": "",
+        "nombre": "Flamenco Puro 🦩​",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "DA HOUSE ABSOLUTA",
-        "descripcion": "",
+        "descripcion": "Equipo de competicion.",
         "area": "DANCE"
     },
     {
         "nombre": "DA HOUSE PREMIUM",
-        "descripcion": "",
+        "descripcion": "Equipo de competicion.",
         "area": "DANCE"
     },
     {
         "nombre": "Comercial DANCE",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Reggaeton Urbano",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "area": "DANCE"
+    },
+    {
+        "nombre": "Locker Kids 🔒​",
+        "descripcion": "Equipo de competición",
         "area": "DANCE"
     },
     {
         "nombre": "VXN Workout",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza Contemporánea",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Salsa",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "HELLS CLASS Basico",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
-        "nombre": "HELLS CLASS Avanzado",
-        "descripcion": "",
+        "nombre": "HEELS CLASS Avanzado",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Danza del Vientre",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Bachata",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "DANCEHall",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "IRIS",
-        "descripcion": "",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
         "area": "DANCE"
     },
     {
         "nombre": "Yoga",
-        "descripcion": "",
-        "area": "DANCE"
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "area": "GYMDANCE"
     },
     {
-        "nombre": "Danza del Vientre",
-        "descripcion": "",
-        "area": "DANCE"
+        "nombre": "Zumba",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "area": "GYMDANCE"
     },
     {
-        "nombre": "Danza del Vientre",
-        "descripcion": "",
-        "area": "DANCE"
-    },
-    {
-        "nombre": "Danza del Vientre",
-        "descripcion": "ZumbaAnimal FlowPilates MAT",
-        "area": "DANCE"
+        "nombre": "Animal Flow",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "area": "GYMDANCE"
+    },{
+        "nombre": "Pilates MAT",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        "area": "GYMDANCE"
     }
 ]

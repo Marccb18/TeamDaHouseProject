@@ -31,6 +31,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/coaches.css">
     <link rel="stylesheet" href="assets/css/clases.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -136,77 +137,59 @@ $tarjetasClases = json_decode($jsonDataClases, true);
         </div>
     </section>
     <!-- About Area End -->
-    <!--? Team -->
-    <section class="team-area fix section-padding30">
-        <div class="container">
-            <div class="row">
+    <!--? Team -->      
+    <section class="traning-categories black-bg">
+        <div class="container-fluid">
+        <div class="row">
                 <div class="col-xl-12">
-                    <div class="section-tittle text-center mb-55">
+                    <div class="section-tittle text-center mb-40">
                         <h2>Cursos Disponibles</h2>
                     </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-xl-12">
-                    <hr style="border-top: 5px solid #e25aab; margin: 40px 0;">
-                </div>
-            </div>
-            
-            <div class="row">
-                <!-- Danza Africana -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Danza Africana"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Danza Africana</a></h5>
-                            <p>Musicos en Directo.</p>
-                            <p>Descripción.</p>
-                        </div>
-                    </div>
-                </div>
-                
-    </section>
-    <section class="traning-categories black-bg">
-        <div class="container-fluid">
-            <div class="cards-container">
+            <div class="cards-container-1">
                 <?php foreach ($tarjetasClases as $tarjeta): if ($tarjeta['area'] === 'DANCE' || $tarjeta['area'] === 'GYMDANCE') {?>
-                    <div class="card">
-                        <div class="fondo-partido">
-                            <!-- <div class="imagen" style="background-image: url('');"></div> -->
-                        </div>
-                        <h3><?php echo $tarjeta['nombre']; ?></h3>
-                        <p><?php echo $tarjeta['descripcion']; ?></p>
-                    </div>
-                <?php } endforeach; ?>
-            </div>
-        </div>
-    </section>
-    <section class="traning-categories black-bg">
-        <div class="container-fluid">
-            <div class="cards-container">
-                <?php foreach ($tarjetas as $tarjeta): if ($tarjeta['area'] === 'GYM' || $tarjeta['area'] === 'GYMDANCE') {?>
-                    <div class="card">
-                        <div class="fondo-partido">
-                            <div class="imagen" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
-                        </div>
-                        <h3><?php echo $tarjeta['nombre']; ?></h3>
-                        <h3 class="titulo"><?php echo $tarjeta['profesion']; ?></h3>
-                        <p><?php echo $tarjeta['descripcion']; ?></p>
-                        <div class="iconos">
-                            <a href="<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                            <a href="<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </div>
+                    <div class="card-1">
+                        <!-- <div class="fondo-partido">
+                             <div class="imagen" style="background-image: url('');"></div>
+                        </div> -->
+                        <h3 class="card-title-1"><?php echo $tarjeta['nombre']; ?></h3>
+                        <p class="card-text-1"><?php echo $tarjeta['descripcion']; ?></p>
                     </div>
                 <?php } endforeach; ?>
             </div>
         </div>
     </section>
     
+    <section class="traning-categories black-bg">
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-40">
+                        <h2>Nuestros Profesores</h2>
+                    </div>
+                </div>
+            </div>
+                <div class="cards-container">
+                    <?php foreach ($tarjetas as $tarjeta): if ($tarjeta['area'] === 'GYM' || $tarjeta['area'] === 'GYMDANCE') {?>
+                        <div class="card">
+                            <div class="fondo-partido">
+                                <div class="imagen" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
+                            </div>
+                            <h3><?php echo $tarjeta['nombre']; ?></h3>
+                            <h3 class="titulo"><?php echo $tarjeta['profesion']; ?></h3>
+                            <p><?php echo $tarjeta['descripcion']; ?></p>
+                            <div class="iconos">
+                                <a href="<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                                <a href="<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    <?php } endforeach; ?>
+                </div>
+            </div>
+        </section>
     
     <!-- Services End -->
     <!-- Traning categories Start -->
@@ -247,16 +230,16 @@ $tarjetasClases = json_decode($jsonDataClases, true);
     <!-- Traning categories End-->
 
     <!-- Table Fees -->
-    <section class="custom-container">
+    <!-- <section class="custom-container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="section-tittle text-center mb-55">
                     <h2>Tarifas Disponibles</h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Tabla Estilo -->
-        <div class="table-container">
+        <!-- <div class="table-container">
             <h3>Estilo</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -278,10 +261,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
         <!-- Tabla Fusiones -->
-        <div class="table-container">
+        <!-- <div class="table-container">
             <h3>Fusiones</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -295,10 +278,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
         <!-- Tabla Bonos -->
-        <div class="table-container">
+        <!-- <div class="table-container">
             <h3>Bonos</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -312,10 +295,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
         <!-- Tabla Sueltas -->
-        <div class="table-container">
+        <!-- <div class="table-container">
             <h3>Sueltas</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -333,10 +316,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
         <!-- Tabla Yoga, Pilates, Animal Flow y Zumba -->
-        <div class="table-container">
+        <!-- <div class="table-container">
             <h3>Yoga, Pilates, Animal Flow, Zumba</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -354,18 +337,18 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
         <!-- Información adicional (Descuentos) -->
-        <div class="info-box">
+        <!-- <div class="info-box">
             <h4>20% DESC. HERMANOS / PADRES</h4>
             <p>*DESCUENTO NO APLICABLE A LA TARIFA ILIMITADA*</p>
             <p>*DESCUENTO SE APLICA A LA TARIFA MAS BAJA*</p>
             <br>
-            <p>3 MIEMBROS DE LA MISMA FAMILIA, DESCUENTO 10% DEL TOTAL</p>
+            <p>3 MIEMBROS DE LA MISMA FAMILIA, DESCUENTO 10% TOTAL</p>
             <p>4 MIEMBROS DE LA MISMA FAMILIA 1 GRATIS</p>
         </div>
-    </section>
+    </section> -->
     <!-- Table Fees End-->
 
     
