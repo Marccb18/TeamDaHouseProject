@@ -3395,6 +3395,7 @@ hr {
   background-size: cover;
 }
 
+
 /* line 37, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area {
   margin-top: -1px;
@@ -3409,6 +3410,7 @@ hr {
 .slider-area .hero__caption {
   overflow: hidden;
 }
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
