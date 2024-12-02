@@ -3,7 +3,7 @@ $jsonData = file_get_contents('./assets/json/data.json');
 $jsonDataClases = file_get_contents('./assets/json/clases.json');
 $tarjetas = json_decode($jsonData, true);
 $tarjetasClases = json_decode($jsonDataClases, true);
-$jsonDataHorarios = file_get_contents('./assets/json/data.json');
+$jsonDataHorarios = file_get_contents('./assets/json/horarios.json');
 $horarios = json_decode($jsonDataHorarios, true);
 ?>
 
