@@ -43,6 +43,16 @@
     border-bottom: 1px solid #666;
 }
 
+h3.tables{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
 .info-box {
     background-color: cyan;
     color: white;

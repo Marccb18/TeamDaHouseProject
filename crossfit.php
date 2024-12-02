@@ -13,7 +13,7 @@ $tarjetas = json_decode($jsonData, true);
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gym trainer | Crossfit </title>
+    <title>DaHouse | Crossfit </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="./site.webmanifest">
@@ -23,7 +23,7 @@ $tarjetas = json_decode($jsonData, true);
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/slicknav.css">
-    <link rel="stylesheet" href="./assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="./assets/css/gijgo.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="./assets/css/animated-headline.css">
@@ -67,7 +67,6 @@ $tarjetas = json_decode($jsonData, true);
                         <nav>
                             <ul id="navigation">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="#Clases">Cursos Disponibles</a></li>
                                 <li><a href="#Profesores">Profesores</a></li>
                                 <li><a href="#Horario">Horario</a></li>
                             </ul>
@@ -149,10 +148,10 @@ $tarjetas = json_decode($jsonData, true);
                         <h3 class="titulo"><?php echo $tarjeta['profesion']; ?></h3>
                         <p><?php echo $tarjeta['descripcion']; ?></p>
                         <div class="iconos">
-                            <a href="./<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="./<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="./<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                            <a href="./<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -164,10 +163,18 @@ $tarjetas = json_decode($jsonData, true);
 
             <!-- Pricing Section --> 
             <!-- Schedule Table -->
-<section class="schedules custom-container">
-    <h3 id="Horario" >Class Schedules</h3>
+<section class="schedules custom-container" id="Horario">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-xl-12">
+            <div class="section-tittle text-center mb-40">
+                <br>
+                <h2>Nuestro Horario</h2>
+            </div>
+        </div>
+    </div>
     <div class="table-container">
-        <table id="Clases" class="tarifa-table">
+        <table class="tarifa-table">
             <thead>
                 <tr>
                     <th>Hora</th>

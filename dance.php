@@ -265,7 +265,7 @@ $horarios = json_decode($jsonDataHorarios, true);
         </div>
         <!-- Tabla Estilo -->
         <div class="table-container">
-            <h3>Estilo</h3>
+            <h3 class="tables">1 Estilo</h3>
             <table class="tarifa-table">
                 <tbody>
                     <tr>
@@ -290,7 +290,7 @@ $horarios = json_decode($jsonDataHorarios, true);
 
         <!-- Tabla Fusiones -->
         <div class="table-container">
-            <h3>Fusiones</h3>
+            <h3 class="tables">Fusiones</h3>
             <table class="tarifa-table">
                 <tbody>
                     <tr>
@@ -307,7 +307,7 @@ $horarios = json_decode($jsonDataHorarios, true);
 
         <!-- Tabla Bonos -->
         <div class="table-container">
-            <h3>Bonos</h3>
+            <h3 class="tables">Bonos</h3>
             <table class="tarifa-table">
                 <tbody>
                     <tr>
@@ -324,7 +324,7 @@ $horarios = json_decode($jsonDataHorarios, true);
 
         <!-- Tabla Sueltas -->
         <div class="table-container">
-            <h3>Sueltas</h3>
+            <h3 class="tables">Sueltas</h3>
             <table class="tarifa-table">
                 <tbody>
                     <tr>
@@ -345,7 +345,7 @@ $horarios = json_decode($jsonDataHorarios, true);
 
         <!-- Tabla Yoga, Pilates, Animal Flow y Zumba -->
         <div class="table-container">
-            <h3>Yoga, Pilates, Animal Flow, Zumba</h3>
+            <h3 class="tables">Yoga, Pilates, Animal Flow, Zumba</h3>
             <table class="tarifa-table">
                 <tbody>
                     <tr>
