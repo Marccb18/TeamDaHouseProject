@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    
+}
+
+.card {
+    height: 250px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(246, 92, 92, 0.341);
+    padding-bottom: 10px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Abel', sans-serif;
+    background-color: black;
+    
+}
+
+/* .imagen {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    border: 8px solid white;
+    top: 180px;
+    left: 220px;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-20deg);
+} */
+
+.fondo-partido {
+    height: 250px;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px rgb(158, 158, 158);
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+.titulo {
+    color: rgb(105, 100, 109);
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(105, 100, 109);
+}
