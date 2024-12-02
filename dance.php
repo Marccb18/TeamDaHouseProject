@@ -3,6 +3,8 @@ $jsonData = file_get_contents('./assets/json/data.json');
 $jsonDataClases = file_get_contents('./assets/json/clases.json');
 $tarjetas = json_decode($jsonData, true);
 $tarjetasClases = json_decode($jsonDataClases, true);
+$jsonDataHorarios = file_get_contents('./assets/json/data.json');
+$horarios = json_decode($jsonDataHorarios, true);
 ?>
 
 <!doctype html>
@@ -66,15 +68,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="courses.html">DaHouse Crossfit</a></li>
-                                    <li><a href="dance.html">DaHouse Dance</a></li>
-                                    <li><a href="profesores.html">Profesores</a>
-                                        <ul class="submenu">
-                                            <li><a href="profCrossfit.html">Crossfit</a></li>
-                                            <li><a href="profDance.html">Dance</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="#Clases">Cursos Disponibles</a></li>
+                                    <li><a href="#Profesores">Profesores</a></li>
+                                    <li><a href="#Horario">Horario</a></li>
+                                    <li><a href="#Tarifas">Tarifas</a></li>
                                 </ul>
                             </nav>
                         </div>          
@@ -138,7 +135,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
     </section>
     <!-- About Area End -->
     <!--? Team -->      
-    <section class="traning-categories black-bg">
+    <section class="traning-categories black-bg" id="Clases">
         <div class="container-fluid">
         <div class="row">
                 <div class="col-xl-12">
@@ -161,11 +158,12 @@ $tarjetasClases = json_decode($jsonDataClases, true);
         </div>
     </section>
     
-    <section class="traning-categories black-bg">
+    <section class="traning-categories black-bg" id="Profesores">
             <div class="container-fluid">
                 <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle text-center mb-40">
+                        <br>
                         <h2>Nuestros Profesores</h2>
                     </div>
                 </div>
@@ -192,54 +190,81 @@ $tarjetasClases = json_decode($jsonDataClases, true);
         </section>
     
     <!-- Services End -->
-    <!-- Traning categories Start -->
-    <!-- <section class="traning-categories black-bg">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="single-topic text-center mb-30">
-                        <div class="topic-img">
-                            <img src="assets/img/gallery/cat1.png" alt="">
-                            <div class="topic-content-box">
-                                <div class="topic-content">
-                                    <h3>Profesores</h3>
-                                    <p>Descubre a nuestros<br> profesores de danza.</p>
-                                    <a href="courses.html" class="border-btn">Ver Profesores</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="single-topic text-center mb-30">
-                        <div class="topic-img">
-                            <img src="assets/img/gallery/cat2.png" alt="">
-                            <div class="topic-content-box">
-                                <div class="topic-content">
-                                    <h3>Tarifas y precios</h3>
-                                    <p>Consulta las diversas opciones <br> disponibles para unirte a nuestras clases. </p>
-                                    <a href="courses.html" class="btn">Ver Tarifas</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+    <!-- Horario -->
+    <section class="traning-categories black-bg" id="Horario">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-xl-12">
+            <div class="section-tittle text-center mb-40">
+                <br>
+                <h2>Nuestro Horario</h2>
             </div>
         </div>
-    </section> -->
-    <!-- Traning categories End-->
+    </div>
+    <div class="table-container">
+        <table class="tarifa-table">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <?php foreach ($horarios as $dia => $horariosDia): ?>
+                        <th><?php echo $dia; ?></th>
+                    <?php endforeach; ?>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                // Primero, obtener todas las horas únicas
+                $todasLasHoras = [];
+                foreach ($horarios as $horariosDia) {
+                    $todasLasHoras = array_merge($todasLasHoras, array_keys($horariosDia));
+                }
+                $todasLasHoras = array_unique($todasLasHoras);
+                sort($todasLasHoras);
+
+                // Ahora crear filas para cada hora
+                foreach ($todasLasHoras as $hora):
+                ?>
+                    <tr>
+                        <td><?php echo $hora; ?></td>
+                        <?php foreach ($horarios as $dia => $horariosDia): ?>
+                            <td>
+                                <?php 
+                                // Verificar si existe una clase para esta hora en este día
+                                if (isset($horariosDia[$hora])) {
+                                    // Si es un array de clases, unirlas
+                                    if (is_array($horariosDia[$hora])) {
+                                        echo implode(', ', $horariosDia[$hora]);
+                                    } else {
+                                        echo $horariosDia[$hora];
+                                    }
+                                } else {
+                                    // Si no hay clase, mostrar espacio vacío
+                                    echo '&nbsp;';
+                                }
+                                ?>
+                            </td>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    </section>
+    <!-- Fin Horario -->
+
 
     <!-- Table Fees -->
-    <!-- <section class="custom-container">
+    <section class="custom-container" id="Tarifas">
         <div class="row">
             <div class="col-xl-12">
                 <div class="section-tittle text-center mb-55">
                     <h2>Tarifas Disponibles</h2>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Tabla Estilo -->
-        <!-- <div class="table-container">
+        <div class="table-container">
             <h3>Estilo</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -261,10 +286,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div> -->
+        </div>
 
         <!-- Tabla Fusiones -->
-        <!-- <div class="table-container">
+        <div class="table-container">
             <h3>Fusiones</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -278,10 +303,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div> -->
+        </div>
 
         <!-- Tabla Bonos -->
-        <!-- <div class="table-container">
+        <div class="table-container">
             <h3>Bonos</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -295,10 +320,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div> -->
+        </div>
 
         <!-- Tabla Sueltas -->
-        <!-- <div class="table-container">
+        <div class="table-container">
             <h3>Sueltas</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -316,10 +341,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div> -->
+        </div>
 
         <!-- Tabla Yoga, Pilates, Animal Flow y Zumba -->
-        <!-- <div class="table-container">
+        <div class="table-container">
             <h3>Yoga, Pilates, Animal Flow, Zumba</h3>
             <table class="tarifa-table">
                 <tbody>
@@ -337,10 +362,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </tr>
                 </tbody>
             </table>
-        </div> -->
+        </div>
 
         <!-- Información adicional (Descuentos) -->
-        <!-- <div class="info-box">
+        <div class="info-box">
             <h4>20% DESC. HERMANOS / PADRES</h4>
             <p>*DESCUENTO NO APLICABLE A LA TARIFA ILIMITADA*</p>
             <p>*DESCUENTO SE APLICA A LA TARIFA MAS BAJA*</p>
@@ -348,7 +373,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
             <p>3 MIEMBROS DE LA MISMA FAMILIA, DESCUENTO 10% TOTAL</p>
             <p>4 MIEMBROS DE LA MISMA FAMILIA 1 GRATIS</p>
         </div>
-    </section> -->
+    </section>
     <!-- Table Fees End-->
 
     
@@ -357,7 +382,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-services mb-40">
+                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                         <div class="features-icon">
                             <img src="assets/img/icon/icon1.svg" alt="">
                         </div>
@@ -368,7 +393,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-services mb-40">
+                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                         <div class="features-icon">
                             <img src="assets/img/icon/icon2.svg" alt="">
                         </div>
@@ -380,14 +405,14 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                    <div class="single-services mb-40">
+                    <div class="single-services mb-40 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
                         <div class="features-icon">
                             <img src="assets/img/icon/icon3.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <h3>Email</h3>
-                            <p>jacson767@gmail.com</p>
-                            <p>contact56@zacsion.com</p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
                 </div>
@@ -406,7 +431,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                         <div class="single-footer-caption mb-50 text-center">
                             <!-- logo -->
                             <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                <a href="./index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                             <!-- Menu -->
                             <!-- Header Start -->
@@ -417,12 +442,12 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                                         <div class="main-menu main-menu2 text-center">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="courses.html">Courses</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="./index.html">Home</a></li>
+                                                    <li><a href="./#">About</a></li>
+                                                    <li><a href="./#">Courses</a></li>
+                                                    <li><a href="./#">Pricing</a></li>
+                                                    <li><a href="./#">Gallery</a></li>
+                                                    <li><a href="./#">Contact</a></li>
                                                 </ul>
                                             </nav>
                                         </div>   
@@ -432,9 +457,8 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                             <!-- Header End -->
                             <!-- social -->
                             <div class="footer-social mt-30 wow fadeInUp" data-wow-duration="3s" data-wow-delay=".8s">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="./#"><i class="fab fa-twitter"></i></a>
+                                <a href="./#"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
                     </div>
@@ -446,8 +470,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                              Copyright &copy;<script>document.write(new Date().getFullYear());</script> </p>
                           </div>
                       </div>
                   </div>
@@ -458,7 +481,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
   </footer>
   <!-- Scroll Up -->
   <div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    <a title="Go to Top" href="./#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
 <!-- JS here -->
@@ -498,7 +521,7 @@ $tarjetasClases = json_decode($jsonDataClases, true);
 <script src="./assets/js/mail-script.js"></script>
 <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
+==<!-- Jquery Plugins, main Jquery -->	
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
