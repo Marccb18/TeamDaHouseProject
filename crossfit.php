@@ -228,7 +228,7 @@ $tarjetas = json_decode($jsonData, true);
                             <div class="single-footer-caption mb-50 text-center">
                                 <!-- logo -->
                                 <div class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                                    <a href="./index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="./index.html"><img src="assets/img/logo/logo.png" alt="Dahouse"></a>
                                 </div>
                                 <!-- Menu -->
                                 <!-- Header Start -->
@@ -267,11 +267,10 @@ $tarjetas = json_decode($jsonData, true);
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-12">
                             <div class="footer-copy-right text-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <p>
                                     Copyright &copy;<script>
                                         document.write(new Date().getFullYear());
-                                    </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="./https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                    </script> All rights reserved 
                             </div>
                         </div>
                     </div>
