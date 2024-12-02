@@ -67,11 +67,10 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="courses.html">DaHouse Crossfit</a></li>
                                     <li><a href="dance.html">DaHouse Dance</a></li>
-                                    <li><a href="blog.html">Blog</a>
+                                    <li><a href="profesores.html">Profesores</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog_details.html">Blog Details</a></li>
-                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="profCrossfit.html">Crossfit</a></li>
+                                            <li><a href="profDance.html">Dance</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
