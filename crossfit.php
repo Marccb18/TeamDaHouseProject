@@ -64,20 +64,14 @@ $tarjetas = json_decode($jsonData, true);
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="crossfit.php">DaHouse Crossfit</a></li>
-                                    <li><a href="dance.php">DaHouse Dance</a></li>
-                                    <li><a href="profesores.html">Profesores</a>
-                                        <ul class="submenu">
-                                            <li><a href="profCrossfit.html">Crossfit</a></li>
-                                            <li><a href="profDance.html">Dance</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
+                        <nav>
+                            <ul id="navigation">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#Clases">Cursos Disponibles</a></li>
+                                <li><a href="#Profesores">Profesores</a></li>
+                                <li><a href="#Horario">Horario</a></li>
+                            </ul>
+                        </nav>    
                         </div>          
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
@@ -143,7 +137,7 @@ $tarjetas = json_decode($jsonData, true);
         </section>
         <div class="crossfit-page">
                         <div class="section-tittle text-center mb-100 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                            <h2>Profesores</h2>
+                            <h2 id="Profesores">Profesores</h2>
                         </div>
             <div class="cards-container">
                 <?php foreach ($tarjetas as $tarjeta): ?>
@@ -164,34 +158,16 @@ $tarjetas = json_decode($jsonData, true);
                 <?php endforeach; ?>
             </div>
 
-            <!-- Image Carousel -->
-            <section class="image-carousel">
-                <h2>CrossFit in Action</h2>
-                <div class="owl-carousel">
-                    <div class="item"><img src="crossfit1.jpg" alt="CrossFit Training"></div>
-                    <div class="item"><img src="crossfit2.jpg" alt="Group Workout"></div>
-                    <div class="item"><img src="crossfit3.jpg" alt="Strength Training"></div>
-                </div>
-            </section>
 
-            <script>
-                $(document).ready(function() {
-                    $(".owl-carousel").owlCarousel({
-                        items: 1,
-                        loop: true,
-                        autoplay: true,
-                        autoplayTimeout: 3000,
-                        autoplayHoverPause: true
-                    });
-                });
-            </script>
 
-            <!-- Pricing Section -->
+          
+
+            <!-- Pricing Section --> 
             <!-- Schedule Table -->
 <section class="schedules custom-container">
-    <h3>Class Schedules</h3>
+    <h3 id="Horario" >Class Schedules</h3>
     <div class="table-container">
-        <table class="tarifa-table">
+        <table id="Clases" class="tarifa-table">
             <thead>
                 <tr>
                     <th>Hora</th>

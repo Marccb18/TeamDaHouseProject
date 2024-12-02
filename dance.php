@@ -1,4 +1,4 @@
-<?php
+    <?php
 $jsonData = file_get_contents('./assets/json/data.json');
 $jsonDataClases = file_get_contents('./assets/json/clases.json');
 $tarjetas = json_decode($jsonData, true);
