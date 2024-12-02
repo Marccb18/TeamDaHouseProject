@@ -1,3 +1,10 @@
+<?php
+$jsonData = file_get_contents('./assets/json/data.json');
+$jsonDataClases = file_get_contents('./assets/json/clases.json');
+$tarjetas = json_decode($jsonData, true);
+$tarjetasClases = json_decode($jsonDataClases, true);
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -10,6 +17,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
+    <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/dist/phosphor.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
@@ -22,8 +30,12 @@
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/tables.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/clases.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/tables.css">
 </head>
 <body class="black-bg">
     <!-- ? Preloader Start -->
@@ -156,240 +168,43 @@
                         </div>
                     </div>
                 </div>
-                <!-- Danza Urbana: Baby, Kids, Infantil, Adultos -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Danza Urbana"> -->
+                
+    </section>
+    <section class="traning-categories black-bg">
+        <div class="container-fluid">
+            <div class="cards-container">
+                <?php foreach ($tarjetasClases as $tarjeta): if ($tarjeta['area'] === 'DANCE' || $tarjeta['area'] === 'GYMDANCE') {?>
+                    <div class="card">
+                        <div class="fondo-partido">
+                            <!-- <div class="imagen" style="background-image: url('');"></div> -->
                         </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Danza Urbana</a></h5>
-                            <p>Clases Baby, Kids, Infantil y Adultos.</p>
-                            <p>Descripción.</p>
-                        </div>
+                        <h3><?php echo $tarjeta['nombre']; ?></h3>
+                        <p><?php echo $tarjeta['descripcion']; ?></p>
                     </div>
-                </div>
-                <!-- Flamenco Puro -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Flamenco Puro"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Flamenco Puro</a></h5>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- DA HOUSE -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="DA HOUSE ABSOLUTA"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">DA HOUSE</a></h5>
-                            <p>ABSOLUTA y PREMIUM</p>   
-                            <p>Grupos de Competición.</p>                        </div>
-                    </div>
-                </div>
-                <!-- Comercial Dance Avanzado  -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Comercial Dance"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Comercial Dance</a></h5>
-                            <p>Avanzado</p>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Locker -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Locker Kids"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Locker Kids</a></h5>
-                            <p>Grupo de Competición niños.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Reggaeton Urbano Juvenil -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Reggaeton Urbano"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Reggaeton Urbano</a></h5>
-                            <p>Juvenil</p>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- VXN Workout -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="VXN Workout"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">VXN Workout</a></h5>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Danza Contemporánea -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Danza Contemporánea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Danza Contemporánea</a></h5>
-                            <p>Infantil, Avanzado & Abierto</p>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Salsa -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Salsa</a></h5>
-                            <p>Normal, Fusion, Chicas, Linea.</p>   
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- HELLS CLASS -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">HELLS CLASS</a></h5>
-                            <p>Basico y Avanzado</p>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Danza del Vientre -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Danza del Vientre</a></h5>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Bachata -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Bachata</a></h5>
-                            <p>Parejas y estilo chicas.</p>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- DanceHall -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">DanceHall Queen</a></h5>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
-                <!-- Iris -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Salsa Línea"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">IRIS</a></h5>
-                            <p>Descripción.</p>                        
-                        </div>
-                    </div>
-                </div>
+                <?php } endforeach; ?>
             </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <hr style="border-top: 5px solid cyan; margin: 40px 0;">
-                </div>
+        </div>
+    </section>
+    <section class="traning-categories black-bg">
+        <div class="container-fluid">
+            <div class="cards-container">
+                <?php foreach ($tarjetas as $tarjeta): if ($tarjeta['area'] === 'GYM' || $tarjeta['area'] === 'GYMDANCE') {?>
+                    <div class="card">
+                        <div class="fondo-partido">
+                            <div class="imagen" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
+                        </div>
+                        <h3><?php echo $tarjeta['nombre']; ?></h3>
+                        <h3 class="titulo"><?php echo $tarjeta['profesion']; ?></h3>
+                        <p><?php echo $tarjeta['descripcion']; ?></p>
+                        <div class="iconos">
+                            <a href="<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                            <a href="<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                <?php } endforeach; ?>
             </div>
-    
-            <!-- Línea inferior: Yoga, Pilates, Animal Flow, Zumba -->
-            <div class="row">
-                <!-- Yoga -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Yoga"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Yoga</a></h5>
-                            <p>Descripción.</p>  
-                        </div>
-                    </div>
-                </div>
-                <!-- Pilates MAT -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Pilates MAT"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Pilates MAT</a></h5>
-                            <p>Descripción.</p>  
-                        </div>
-                    </div>
-                </div>
-                <!-- Animal Flow -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Animal Flow"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Animal Flow</a></h5>
-                            <p>Descripción.</p>  
-                        </div>
-                    </div>
-                </div>
-                <!-- Zumba -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-cat text-center mb-30">
-                        <div class="cat-icon">
-                            <!-- <img src="assets/img/gallery/Imagen_Prueba_Dance.png" alt="Zumba"> -->
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="#">Zumba</a></h5>
-                            <p>Descripción.</p>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </section>
     
