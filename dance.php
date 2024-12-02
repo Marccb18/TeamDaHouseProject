@@ -65,8 +65,8 @@ $tarjetasClases = json_decode($jsonDataClases, true);
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="courses.html">DaHouse Crossfit</a></li>
-                                    <li><a href="dance.html">DaHouse Dance</a></li>
+                                    <li><a href="crossfit.php">DaHouse Crossfit</a></li>
+                                    <li><a href="dance.php">DaHouse Dance</a></li>
                                     <li><a href="profesores.html">Profesores</a>
                                         <ul class="submenu">
                                             <li><a href="profCrossfit.html">Crossfit</a></li>

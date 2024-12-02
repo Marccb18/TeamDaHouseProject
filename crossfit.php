@@ -1,5 +1,8 @@
 <?php
 $jsonData = file_get_contents('./assets/json/data.json');
+$jsonDataClases = file_get_contents(filename: './assets/json/horarios.json');
+
+$horarios = json_decode(json: $jsonDataClases, associative: true);
 
 $tarjetas = json_decode($jsonData, true);
 ?>
@@ -32,137 +35,8 @@ $tarjetas = json_decode($jsonData, true);
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/coaches.css">
     <link rel="stylesheet" href="./https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        /* Section Styles */
-        .crossfit-page h1 {
-            text-align: center;
-            color: #e74c3c;
-            border-bottom: 2px solid #e74c3c;
-            padding-bottom: 10px;
-        }
-
-        /* Description Section */
-        .description {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        /* Image Carousel */
-        .image-carousel {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .carousel {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            overflow-x: auto;
-        }
-
-        .carousel img {
-            max-width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Pricing Section */
-        .pricing {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .price-options {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .price-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            width: 250px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .price-card:hover {
-            transform: scale(1.05);
-        }
-
-        .price-card h3 {
-            color: #e74c3c;
-            margin-bottom: 10px;
-        }
-
-        .price-card p {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #2ecc71;
-        }
-
-        .price-card ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        /* Schedule Table */
-        .schedules {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        table th,
-        table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        table thead {
-            background-color: #e74c3c;
-            color: white;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        table tr:hover {
-            background-color: #ddd;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .price-options {
-                flex-direction: column;
-            }
-
-            .carousel {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/crossfit.css">
+    <link rel="stylesheet" href="./assets/css/tables.css">
 </head>
 
 <body class="black-bg">
@@ -180,48 +54,45 @@ $tarjetas = json_decode($jsonData, true);
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
-        <div class="header-area header-transparent">
+        <div class="header-area dance header-transparent">
             <div class="main-header header-sticky">
                 <div class="container-fluid">
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="./index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./about.html">About</a></li>
-                                    <li><a href="./courses.html">Courses</a></li>
-                                    <li><a href="./pricing.html">Pricing</a></li>
-                                    <li><a href="./gallery.html">Gallery</a></li>
-                                    <li><a href="./blog.html">Blog</a>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="crossfit.php">DaHouse Crossfit</a></li>
+                                    <li><a href="dance.php">DaHouse Dance</a></li>
+                                    <li><a href="profesores.html">Profesores</a>
                                         <ul class="submenu">
-                                            <li><a href="./blog.html">Blog</a></li>
-                                            <li><a href="./blog_details.html">Blog Details</a></li>
-                                            <li><a href="./elements.html">Elements</a></li>
+                                            <li><a href="profCrossfit.html">Crossfit</a></li>
+                                            <li><a href="profDance.html">Dance</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="./contact.html">Contact</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
-                        </div>
+                        </div>          
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
-                            <a href="./contact.html" class="btn">Contact me</a>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
+                           <a href="contact.html" class="btn">Contact me</a>
+                       </div>
+                       <!-- Mobile Menu -->
+                       <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Header End -->
-    </header>
+    </div>
+    <!-- Header End -->
+</header>
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -238,47 +109,6 @@ $tarjetas = json_decode($jsonData, true);
             </div>
         </div>
         <!-- Hero End -->
-        <!--? Team -->
-        <section class="team-area pt-80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <div class="cat-icon">
-                                <img src="assets/img/gallery/team1.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="./services.html">Body Building</a></h5>
-                                <p>You’ll look at graphs and charts in Task One, how to approach the task </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="cat-icon">
-                                <img src="assets/img/gallery/team2.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="./services.html">Muscle Gain</a></h5>
-                                <p>You’ll look at graphs and charts in Task One, how to approach the task </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-cat text-center mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                            <div class="cat-icon">
-                                <img src="assets/img/gallery/team3.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="./services.html">Weight Loss</a></h5>
-                                <p>You’ll look at graphs and charts in Task One, how to approach the task </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services End -->
         <!--? About Area-2 Start -->
         <section class="about-area2 fix pb-padding pt-50 pb-80">
             <div class="support-wrapper align-items-center">
@@ -292,15 +122,12 @@ $tarjetas = json_decode($jsonData, true);
                     <!-- section tittle -->
                     <div class="section-tittle2 mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="front-text">
-                            <h2 class="">About Our CrossFit Program</h2>
+                            <h2 class="">Sobre Nuestro Programa de CrossFit</h2>
                             <p>
-                                Our CrossFit program is designed to help you achieve peak fitness through high-intensity,
-                                functional movements. Led by certified coaches, our classes combine strength training,
-                                cardio, and skill work to improve your overall fitness, strength, and endurance.
-                                Suitable for all fitness levels, our program focuses on personalized coaching
-                                and a supportive community environment.
+                                Nuestro programa de CrossFit está diseñado para ayudarte a alcanzar tu máximo rendimiento físico a través de movimientos funcionales de alta intensidad. 
+                                Dirigido por entrenadores certificados, nuestras clases combinan entrenamiento de fuerza, cardio y trabajo de habilidades para mejorar tu condición física general, 
+                                fuerza y resistencia. Apto para todos los niveles de fitness, nuestro programa se enfoca en el entrenamiento personalizado y un ambiente de comunidad solidario.
                             </p>
-                            <a href="./courses.html" class="border-btn">My Courses</a>
                         </div>
                     </div>
                 </div>
@@ -311,56 +138,23 @@ $tarjetas = json_decode($jsonData, true);
         <section class="home-blog-area pt-10 pb-50">
             <div class="container">
                 <!-- Section Tittle -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-9 col-sm-10">
-                        <div class="section-tittle text-center mb-100 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                            <h2>From Blog</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog1.png" alt="">
-                                </div>
-                                <div class="blog-cap">
-                                    <span>Gym & Fitness</span>
-                                    <h3><a href="./blog_details.html">Your Antibiotic One Day To 10 Day Options</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="home-blog-single mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog2.png" alt="">
-                                </div>
-                                <div class="blog-cap">
-                                    <span>Gym & Fitness</span>
-                                    <h3><a href="./blog_details.html">Your Antibiotic One Day To 10 Day Options</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
         <div class="crossfit-page">
-            <h1>Profesores</h1>
-
+                        <div class="section-tittle text-center mb-100 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                            <h2>Profesores</h2>
+                        </div>
             <div class="cards-container">
                 <?php foreach ($tarjetas as $tarjeta): ?>
-                    <div class="container">
-                        <div class="shape">
-                            <div class="image" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
+                    <div class="card">
+                        <div class="fondo-partido">
+                            <div class="imagen" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
                         </div>
                         <h3><?php echo $tarjeta['nombre']; ?></h3>
-                        <h3 class="title"><?php echo $tarjeta['profesion']; ?></h3>
+                        <h3 class="titulo"><?php echo $tarjeta['profesion']; ?></h3>
                         <p><?php echo $tarjeta['descripcion']; ?></p>
-                        <div class="icons">
+                        <div class="iconos">
                             <a href="./<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="./<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             <a href="./<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
@@ -393,79 +187,58 @@ $tarjetas = json_decode($jsonData, true);
             </script>
 
             <!-- Pricing Section -->
-            <section class="pricing">
-                <h2>Membership Prices</h2>
-                <div class="price-options">
-                    <div class="price-card">
-                        <h3>Starter Pack</h3>
-                        <p>$99/month</p>
-                        <ul>
-                            <li>2 Classes per Week</li>
-                            <li>Basic Equipment Access</li>
-                        </ul>
-                    </div>
-                    <div class="price-card">
-                        <h3>Unlimited</h3>
-                        <p>$159/month</p>
-                        <ul>
-                            <li>Unlimited Classes</li>
-                            <li>Full Gym Access</li>
-                            <li>Personal Coaching</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
             <!-- Schedule Table -->
-            <section class="schedules">
-                <h2>Class Schedules</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>Morning Class</th>
-                            <th>Evening Class</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Monday</td>
-                            <td>6:00 AM - Strength</td>
-                            <td>6:30 PM - WOD</td>
-                        </tr>
-                        <tr>
-                            <td>Tuesday</td>
-                            <td>7:00 AM - Cardio</td>
-                            <td>7:00 PM - Skill Work</td>
-                        </tr>
-                        <tr>
-                            <td>Wednesday</td>
-                            <td>6:00 AM - Mixed</td>
-                            <td>6:30 PM - Endurance</td>
-                        </tr>
-                        <tr>
-                            <td>Thursday</td>
-                            <td>7:00 AM - Strength</td>
-                            <td>7:00 PM - WOD</td>
-                        </tr>
-                        <tr>
-                            <td>Friday</td>
-                            <td>6:00 AM - Cardio</td>
-                            <td>6:30 PM - Team Workout</td>
-                        </tr>
-                        <tr>
-                            <td>Saturday</td>
-                            <td>9:00 AM - Community WOD</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sunday</td>
-                            <td>Closed</td>
-                            <td>Closed</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+<section class="schedules custom-container">
+    <h3>Class Schedules</h3>
+    <div class="table-container">
+        <table class="tarifa-table">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <?php foreach ($horarios as $dia => $horariosDia): ?>
+                        <th><?php echo $dia; ?></th>
+                    <?php endforeach; ?>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                // Primero, obtener todas las horas únicas
+                $todasLasHoras = [];
+                foreach ($horarios as $horariosDia) {
+                    $todasLasHoras = array_merge($todasLasHoras, array_keys($horariosDia));
+                }
+                $todasLasHoras = array_unique($todasLasHoras);
+                sort($todasLasHoras);
+
+                // Ahora crear filas para cada hora
+                foreach ($todasLasHoras as $hora):
+                ?>
+                    <tr>
+                        <td><?php echo $hora; ?></td>
+                        <?php foreach ($horarios as $dia => $horariosDia): ?>
+                            <td>
+                                <?php 
+                                // Verificar si existe una clase para esta hora en este día
+                                if (isset($horariosDia[$hora])) {
+                                    // Si es un array de clases, unirlas
+                                    if (is_array($horariosDia[$hora])) {
+                                        echo implode(', ', $horariosDia[$hora]);
+                                    } else {
+                                        echo $horariosDia[$hora];
+                                    }
+                                } else {
+                                    // Si no hay clase, mostrar espacio vacío
+                                    echo '&nbsp;';
+                                }
+                                ?>
+                            </td>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
         </div>
     </main>
     <footer>
