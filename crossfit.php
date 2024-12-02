@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- carrousel -->
+    <?php
+$jsonData = file_get_contents('data.json');
 
+$tarjetas = json_decode($jsonData, true);
+?>
     <style>
 
         /* Section Styles */
@@ -221,7 +224,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-70">
-                            <h2>Crossfit</h2>
+                            <h2>Da house of Crossfit</h2>
                         </div>
                     </div>
                 </div>
@@ -344,7 +347,24 @@
     <div class="crossfit-page">
         <h1>CrossFit Program</h1>
         
-
+        <div class="cards-container">
+            <?php foreach ($tarjetas as $tarjeta): ?>
+                <div class="container">
+                    <div class="shape">
+                        <div class="image" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
+                    </div>
+                    <h3><?php echo $tarjeta['nombre']; ?></h3>
+                    <h3 class="title"><?php echo $tarjeta['profesion']; ?></h3>
+                    <p><?php echo $tarjeta['descripcion']; ?></p>
+                    <div class="icons">
+                        <a href="<?php echo $tarjeta['facebook']; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="<?php echo $tarjeta['instagram']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="<?php echo $tarjeta['pinterest']; ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                        <a href="<?php echo $tarjeta['twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
 
         <!-- Image Carousel -->
         <section class="image-carousel">
