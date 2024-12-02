@@ -12,7 +12,7 @@ $horarios = json_decode($jsonDataHorarios, true);
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Gym trainer | Template </title>
+    <title>DaHouse | Dance </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -169,7 +169,7 @@ $horarios = json_decode($jsonDataHorarios, true);
                 </div>
             </div>
                 <div class="cards-container">
-                    <?php foreach ($tarjetas as $tarjeta): if ($tarjeta['area'] === 'GYM' || $tarjeta['area'] === 'GYMDANCE') {?>
+                    <?php foreach ($tarjetas as $tarjeta): if ($tarjeta['area'] === 'DANCE' || $tarjeta['area'] === 'GYMDANCE') {?>
                         <div class="card">
                             <div class="fondo-partido">
                                 <div class="imagen" style="background-image: url('<?php echo $tarjeta['imagen']; ?>');"></div>
