@@ -1,5 +1,4 @@
-/* Contenedor general */
-.container {
+.custom-container { 
     margin: 40px auto;
     padding: 40px;
     width: 60%;
@@ -7,14 +6,13 @@
     color: white;
 }
 
-/* Estilo de las tablas */
 .table-container {
     margin-bottom: 30px;
-    text-align: left; /* Alineación a la izquierda para los títulos */
+    text-align: left; 
 }
 
 .tarifa-table {
-    width: 100%; /* Aumentar al 100% del contenedor */
+    width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
     background-color: #333;
